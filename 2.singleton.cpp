@@ -1,4 +1,4 @@
-// implementation without mutex
+// implementation with mutex
 #include<iostream>
 #include<pthread.h>
 using namespace std;
