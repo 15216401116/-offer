@@ -71,6 +71,21 @@ public:
             current = current->next;
         }
     }
+    void printReverse()
+    {
+        if(head->next!=NULL)
+            printR(head->next);
+        else
+          cout<<"empty list"<<endl;
+    }
+    void printR(node* current)
+    {
+        if( current->next != NULL)
+        {
+            printR(current->next);
+        }
+        cout<<current->data<<" ";
+    }
     
 private:
     node* head;
@@ -96,4 +111,6 @@ int main()
     ll.removeNode(7);
     cout<<ll.getLength()<<endl;
     ll.printList();
+    cout<<endl;
+    ll.printReverse();
 }
