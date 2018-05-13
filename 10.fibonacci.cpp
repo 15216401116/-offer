@@ -39,9 +39,9 @@ int main()
     clock_t start = clock();
     int result0 = quick(n);
     clock_t end = clock();
-    cout<<end-start<<" "<<result0<<endl;
-    start = clock();
+    cout<<(double)(end-start)/CLOCKS_PER_SEC<<" "<<result0<<endl;
+    clock_t start1 = clock();
     int result1 = slow(n);
-    end = clock();
-    cout<<end-start<<" "<<result1<<endl;
+    clock_t end1 = clock();
+    cout<<(double)(end1-start1)/CLOCKS_PER_SEC<<" "<<result1<<endl;
 }
